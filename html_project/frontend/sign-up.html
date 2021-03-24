@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/app/scss/style.css">
+  <title>Adeel Academy | Sign Up</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+      <nav class="flex flex-jc-sb flex-ai-c">
+        <a href="/" class="header__logo">
+          <img src='images/logo.webp'alt="Logo">
+        </a>
+      </nav>
+  </header>
+        
+  <!-- User Input -->
+  <form action="#" method="POST" style="padding: 40px;">
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required ><br>
+      <label for="password">Password:</label><br>
+      <input type="text" id="password" name="password" required minlength="6"><br>
+      <p style="margin-bottom: 5px;">Password must be at least 6 characters long.</p>
+      <button type="submit" style="margin-top: 20px;">Sign Up</button>
+  </form>
+
+  <p style="text-align: center;">Already have an account?</p>
+  <div style="text-align: center;">
+      <a href="/log-in.html" style="color: blue;">Log In</a>
+  </div>
+    
+</body>

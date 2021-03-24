@@ -1,0 +1,109 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: black;
+  line-height: 1.3;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button, .button {
+  padding: 0.875rem 2.1875rem;
+  background: -webkit-gradient(linear, left top, right top, from(#fa5400), to(#fcbb00));
+  background: linear-gradient(to right, #fa5400, #fcbb00);
+  border: 0;
+  border-radius: 50px;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+form {
+  text-align: center;
+  font-size: 1.125rem;
+  padding: 1rem;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 2px solid black;
+}
+
+.header {
+  background-color: #ab1b23;
+}
+
+.header nav {
+  padding: 24px 48px;
+}
+
+.header__logo img {
+  width: 10.96875rem;
+  height: 4.546875rem;
+}
+
+.header__menu > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #ab1b23;
+}
+
+.header__menu > span:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.header__links a {
+  font-size: 0.875rem;
+  margin-left: 16px;
+}
+
+.header__links a:not(:last-child) {
+  margin-right: 32px;
+}
+/*# sourceMappingURL=style.css.map */
