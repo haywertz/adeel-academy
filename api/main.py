@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from flask_restful import Api, Resource
@@ -10,6 +10,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']  = False
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
+
 api = Api(app)
 CORS(app=app)
 
@@ -1173,13 +1174,16 @@ class LoginListResource(Resource):
         return logins_schema.dump(logins)
 
     def post(self):
+
+        data = request.get_json(force=True)
+
         new_login = Login(
-            email=request.json['email'],
-            password=request.json['password'],
+            email=data['email'],
+            password=data['password'],
         )
         db.session.add(new_login)
         db.session.commit()
-        return login_schema.dump(new_login)
+        return jsonify({"hello":"asdf"})
 
 
 class LoginResource(Resource):
