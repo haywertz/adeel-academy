@@ -1,0 +1,104 @@
+.header {
+
+    // Hamburger Open Styles
+    &.open {
+        .header__menu {
+            > span:first-child {
+                transform: rotate(45deg);
+            }
+
+            >span:nth-child(2) {
+                opacity: 0;
+            }
+
+            > span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    
+    background-color: $grayishRed;
+
+    nav {
+        padding: 24px 48px;
+    }
+
+    // Hamburger Menu Styling
+    &__menu {
+        > span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $white;
+            transform-origin: 3px 1px;
+            transition: all 200ms ease-in-out;
+
+            &:not(last-child){
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .overlay {
+        position: fixed;
+        top: 4.3125rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $black;
+    }
+
+    &__logo {
+
+        img {
+            width: 10.96875rem;
+            height: 4.546875rem;
+        }
+
+    }
+
+    /* Mobile Menu
+    &__menu { //Mobile Menu
+
+        > span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $grayishRed;
+
+            &:not(:last-child){
+                margin-bottom: 3px;
+            }
+        }
+    }
+    */
+
+    &__links {
+
+        a {
+            font-size: $font-sm;
+            color: $white;
+            transition: opacity 200ms ease-in-out;
+
+            &:first-child{
+                margin-left: 16px;
+            }
+
+            &:not(:last-child){
+                margin-right: 16px;
+            }
+
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+    }
+
+    &__cta {
+        transition: opacity 200ms ease-in-out;
+
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+}

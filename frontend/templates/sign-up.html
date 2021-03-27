@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 
-
 {% block header %}
 <title>Adeel Academy | Sign Up</title>
 {% endblock %}
@@ -18,14 +17,14 @@
   <!-- User Input -->
   <form method="POST" style="padding: 40px;" onsubmit="signUp()">
       <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required ><br>
+      <input type="email" id="email" name="email" required><br>
       
       <label for="password">Password:</label><br>
       <input id="password" name="password" required minlength="6" type="password"><br>
 
-      <input type="radio" id="ttudent" name="gender" value="Student">
+      <input type="radio" id="student" name="type" value="Student" required>
       <label for="Student">Student</label><br>
-      <input type="radio" id="teacher" name="gender" value="Teacher">
+      <input type="radio" id="teacher" name="type" value="Teacher" required>
       <label for="Teacher">Teacher</label><br>
 
       <p style="margin-bottom: 5px;">Password must be at least 6 characters long.</p>

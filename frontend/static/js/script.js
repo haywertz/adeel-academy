@@ -1,6 +1,18 @@
 
 let url_base = "http://127.0.0.1:5000/" 
 
+// Hamburger Menu Script
+const btnHamburger = document.querySelector('#btnHamburger');
+const header = document.querySelector('.header');
+btnHamburger.addEventListener('click', function() {
+    console.log('burger clicked');
+    if(header.classList.contains('open')) {
+        header.classList.remove('open');
+    } 
+    else {
+        header.classList.add('open');
+    }
+})
 
 function signUp() {
 
