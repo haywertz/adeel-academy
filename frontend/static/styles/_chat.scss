@@ -1,0 +1,12 @@
+.chat {
+
+    background-color: antiquewhite;
+
+    &:-from-me {
+        background-color: $white;
+    }
+
+    &:not(-from-me) {
+        background-color: $veryLightGrey;
+    }
+}

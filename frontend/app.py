@@ -24,14 +24,14 @@ def log_in():
 
 @app.route('/dashboard', methods=['GET', 'POST'])
 def dashboard():
-    if authenticated:
+    # if authenticated:
         return render_template('dashboard.html', courses=["Biology", "Physics", "Math"])
-    else:
-        return redirect(url_for('log_in'))
+    # else:
+    #     return redirect(url_for('log_in'))
 
 @app.route('/inbox', methods=['GET', 'POST'])
 def inbox():
-    return render_template('inbox.html')
+    return render_template('inbox.html', chats = ["Maria", "Joe", "Frank"])
 
 if __name__ == '__main__':
     app.run(port="8000", debug=True)

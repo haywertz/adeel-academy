@@ -1,19 +1,6 @@
 
 let url_base = "http://127.0.0.1:5000/" 
 
-// Hamburger Menu Script
-const btnHamburger = document.querySelector('#btnHamburger');
-const header = document.querySelector('.header');
-btnHamburger.addEventListener('click', function() {
-    console.log('burger clicked');
-    if(header.classList.contains('open')) {
-        header.classList.remove('open');
-    } 
-    else {
-        header.classList.add('open');
-    }
-})
-
 function signUp() {
 
     var email = document.getElementById("email").value;
@@ -26,7 +13,7 @@ function signUp() {
             email: email,
             password: password
             }),
-        success: console.log("sucess"), 
+        success: console.log("success"), 
         error: console.log("error"),
         dataType: "application/json",
         contentType : "application/json"
@@ -43,7 +30,7 @@ function logIn() {
         async: true,
         type: "GET",
         url: url_base + "logins",
-        success: console.log("sucess"), 
+        success: console.log("success"), 
         error: console.log("error"),
         dataType: "application/json",
         contentType : "application/json",
@@ -52,4 +39,10 @@ function logIn() {
         }
     });
 
+}
+
+function getChat(chatID) {
+    // Get this chat
+
+    // Change Chat Window area to display this chat
 }
